@@ -8,6 +8,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
+
+// Redirect www to naked domain
+app.use((req, res, next) => {
+  const host = req.hostname;
+  if (host && host.startsWith('www.')) {
+    return res.redirect(301, `https://${host.slice(4)}${req.originalUrl}`);
+  }
+  next();
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // --- Helpers ---
