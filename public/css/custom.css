@@ -1,0 +1,184 @@
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #3A9F99, #22d3ee, #4263eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient background for CTAs */
+.gradient-bg {
+  background: linear-gradient(135deg, #D94A21, #3A9F99);
+}
+
+.gradient-bg:hover {
+  background: linear-gradient(135deg, #c44420, #348f8a);
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(58, 159, 153, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(58, 159, 153, 0.1);
+}
+
+/* Prose styling for markdown content — dark theme */
+.prose h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.prose h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #3A9F99;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: #b0b0be;
+  font-size: 1.05rem;
+}
+
+.prose ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.75rem;
+  line-height: 1.75;
+  color: #b0b0be;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.prose li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3A9F99, #22d3ee);
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #fff;
+}
+
+.prose em {
+  font-style: italic;
+  color: #d5d5dc;
+}
+
+.prose a {
+  color: #3A9F99;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(58, 159, 153, 0.3);
+  transition: all 0.2s ease;
+}
+
+.prose a:hover {
+  color: #22d3ee;
+  border-bottom-color: #22d3ee;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 3rem 0;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #3A9F99;
+  outline-offset: 2px;
+}
+
+/* Subtle line decoration */
+.line-accent {
+  background: linear-gradient(90deg, transparent, rgba(58, 159, 153, 0.3), transparent);
+  height: 1px;
+}
+
+/* Parallax sections */
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  background-size: cover;
+  background-position: center top;
+  will-change: transform;
+  /* Extend the image taller than the container so there's room to scroll */
+  top: -15%;
+  bottom: -15%;
+  height: 130%;
+  width: 100%;
+}
+
+/* Override for images where center works better (e.g. tech/UI screenshots) */
+.parallax-bg.bg-center {
+  background-position: center center;
+}
+
+/* Fade-in on scroll */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children animation */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.75s; opacity: 1; transform: translateY(0); }

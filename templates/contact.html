@@ -1,0 +1,72 @@
+<!-- Contact page with form -->
+<section class="relative">
+  <div class="absolute -top-40 right-0 w-96 h-96 bg-accent-teal/5 rounded-full blur-3xl"></div>
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+    <div class="prose prose-dark max-w-none mb-12">
+      {{content}}
+    </div>
+
+    <div class="max-w-xl">
+      {{formMessage}}
+
+      <form method="POST" action="/contact" class="space-y-6" id="contact-form">
+        <!-- Honeypot: hidden from humans, bots will fill it -->
+        <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+        </div>
+        <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+          <label for="email">Your Email</label>
+          <input type="email" name="email" id="email" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- Timestamp for timing-based spam detection -->
+        <input type="hidden" name="_ts" value="{{formTimestamp}}">
+
+        <!-- Real fields with obfuscated names -->
+        <div>
+          <label for="f_a7x" class="block text-sm font-medium text-dark-300 mb-2">Name</label>
+          <input
+            type="text"
+            name="f_a7x"
+            id="f_a7x"
+            required
+            class="w-full px-4 py-3 bg-dark-900 border border-white/10 rounded-lg text-white placeholder-dark-500 focus:ring-2 focus:ring-accent-teal/50 focus:border-accent-teal transition-all"
+            placeholder="Your name"
+          >
+        </div>
+
+        <div>
+          <label for="f_q9m" class="block text-sm font-medium text-dark-300 mb-2">Email</label>
+          <input
+            type="email"
+            name="f_q9m"
+            id="f_q9m"
+            required
+            class="w-full px-4 py-3 bg-dark-900 border border-white/10 rounded-lg text-white placeholder-dark-500 focus:ring-2 focus:ring-accent-teal/50 focus:border-accent-teal transition-all"
+            placeholder="you@example.com"
+          >
+        </div>
+
+        <div>
+          <label for="f_k3p" class="block text-sm font-medium text-dark-300 mb-2">Message</label>
+          <textarea
+            name="f_k3p"
+            id="f_k3p"
+            rows="5"
+            required
+            class="w-full px-4 py-3 bg-dark-900 border border-white/10 rounded-lg text-white placeholder-dark-500 focus:ring-2 focus:ring-accent-teal/50 focus:border-accent-teal transition-all resize-none"
+            placeholder="Tell us about your project..."
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full sm:w-auto px-8 py-3 gradient-bg text-white font-semibold rounded-lg hover:opacity-90 focus:ring-2 focus:ring-accent-teal/50 focus:ring-offset-2 focus:ring-offset-dark-950 transition-all"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

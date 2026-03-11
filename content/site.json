@@ -1,0 +1,20 @@
+{
+  "companyName": "Falcon Venture Group",
+  "tagline": "Strategic consulting for brands that mean business.",
+  "metaDescription": "Falcon Venture Group is a strategic consulting firm that launches and grows businesses. We help brands find their voice and communicate it consistently to their target audience.",
+  "headSnippets": [],
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Case Studies", "href": "/case-studies" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" },
+    { "label": "Privacy", "href": "/privacy" }
+  ],
+  "socialLinks": {
+    "linkedin": "",
+    "youtube": ""
+  },
+  "footerText": "© 2026 Falcon Venture Group. A Delaware Corporation.",
+  "contactEmail": "yulia@falconventuregroup.com"
+}

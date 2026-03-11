@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{pageTitle}} | {{companyName}}</title>
+  <meta name="description" content="{{metaDescription}}">
+  {{headSnippets}}
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: {
+              50: '#f7f7f8',
+              100: '#ececf0',
+              200: '#d5d5dc',
+              300: '#b0b0be',
+              400: '#85859a',
+              500: '#66667f',
+              600: '#515168',
+              700: '#434355',
+              800: '#2d2d3a',
+              900: '#1a1a2e',
+              950: '#0f0f1a',
+            },
+            accent: {
+              teal: '#3A9F99',
+              orange: '#D94A21',
+              cyan: '#22d3ee',
+              blue: '#4263eb',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/custom.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Falcon Venture Group",
+    "url": "https://falconventuregroup.com",
+    "description": "Strategic consulting firm specializing in brand voice, user experience design, and business growth.",
+    "founder": {
+      "@type": "Person",
+      "name": "Yulia Berman",
+      "jobTitle": "CEO"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+</head>
+<body class="bg-dark-950 text-white font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="bg-dark-950/80 backdrop-blur-xl border-b border-white/5 text-white sticky top-0 z-50" aria-label="Main navigation">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center space-x-3 group" aria-label="Falcon Venture Group home">
+          <span class="text-xl font-black tracking-tight font-mono gradient-text" aria-hidden="true">FVG</span>
+          <span class="hidden sm:inline text-sm text-dark-400 font-light group-hover:text-dark-300 transition-colors">Falcon Venture Group</span>
+        </a>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/5 transition-colors" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <!-- Desktop nav -->
+        <div class="hidden md:flex items-center space-x-1" role="list">
+          {{navLinks}}
+        </div>
+      </div>
+
+      <!-- Mobile nav -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4" role="list">
+        {{navLinksMobile}}
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page content -->
+  <main>
+    {{content}}
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 mt-0">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="font-mono font-black text-2xl mb-3 gradient-text">FVG</h3>
+          <p class="text-sm text-dark-400 leading-relaxed">{{tagline}}</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            {{footerNavLinks}}
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Contact</h4>
+          <p class="text-sm"><a href="/contact" class="text-dark-400 hover:text-accent-teal transition-colors">Get in touch &rarr;</a></p>
+        </div>
+      </div>
+      <div class="border-t border-white/5 mt-12 pt-8 text-xs text-dark-500">
+        {{footerText}}
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      const isHidden = menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !isHidden);
+    });
+
+    // Parallax scrolling
+    (function() {
+      const parallaxBgs = document.querySelectorAll('.parallax-bg');
+      if (!parallaxBgs.length) return;
+
+      function updateParallax() {
+        parallaxBgs.forEach(bg => {
+          const section = bg.parentElement;
+          const rect = section.getBoundingClientRect();
+          const windowH = window.innerHeight;
+
+          // Only process if section is in or near viewport
+          if (rect.bottom < -100 || rect.top > windowH + 100) return;
+
+          // Calculate how far through the viewport the section has scrolled
+          // 0 = section just entering bottom, 1 = section just leaving top
+          const progress = (windowH - rect.top) / (windowH + rect.height);
+          // Map to a translate range: moves image by 20% of its height
+          const translate = (progress - 0.5) * 20;
+          bg.style.transform = 'translate3d(0, ' + translate + '%, 0)';
+        });
+      }
+
+      // Use requestAnimationFrame for smooth performance
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            updateParallax();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+
+      updateParallax();
+    })();
+
+    // Scroll-triggered fade-in animations
+    (function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.fade-in-up, .stagger-children').forEach(el => {
+        observer.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>

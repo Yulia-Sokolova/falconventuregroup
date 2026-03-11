@@ -1,0 +1,234 @@
+<!-- Hero — full-width background image -->
+<header class="relative overflow-hidden">
+  <div class="absolute inset-0" aria-hidden="true">
+    <img src="/images/hero-bg.jpg" alt="" class="w-full h-full object-cover" loading="eager">
+    <div class="absolute inset-0 bg-dark-950/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-dark-950/80 via-dark-950/40 to-dark-950/60"></div>
+  </div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
+    <div class="max-w-3xl">
+      {{heroContent}}
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true"></div>
+</header>
+
+<!-- Services overview -->
+<section aria-labelledby="services-heading">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    {{servicesContent}}
+  </div>
+</section>
+
+<!-- Fashion Runway Carousel -->
+<section aria-label="Fashion runway photography from our projects" class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-dark-950 via-dark-900/50 to-dark-950" aria-hidden="true"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    <div class="text-center mb-10">
+      <p class="text-sm font-mono tracking-[0.3em] uppercase text-accent-teal mb-3">Our Work</p>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white">Fashion Weeks Worldwide</h2>
+      <p class="text-dark-400 mt-3 max-w-xl mx-auto">Brand experience design for designers showcased at New York Fashion Week, London Fashion Week, and Miami Swim Week.</p>
+    </div>
+    <div class="relative overflow-hidden rounded-2xl glass-card" style="height: 520px;">
+      <div class="carousel-track flex h-full" id="home-carousel">
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/hugo-boss-1.jpg" alt="Hugo Boss FW2019 — model on runway at New York Fashion Week" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Hugo Boss FW2019</p>
+              <p class="text-xs text-dark-300">New York Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/carolina-herrera-1.jpg" alt="Carolina Herrera SS15 — runway look at Mercedes-Benz Fashion Week" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Carolina Herrera SS15</p>
+              <p class="text-xs text-dark-300">Mercedes-Benz Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/vera-wang-1.jpg" alt="Vera Wang SS14 — runway look at Mercedes-Benz Fashion Week" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Vera Wang SS14</p>
+              <p class="text-xs text-dark-300">Mercedes-Benz Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/lie-sang-bong-1.jpg" alt="Lie Sang Bong SS15 — runway look at Mercedes-Benz Fashion Week" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Lie Sang Bong SS15</p>
+              <p class="text-xs text-dark-300">Mercedes-Benz Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/zang-toi-1.jpg" alt="Zang Toi SS16 — runway look at New York Fashion Week" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Zang Toi SS16</p>
+              <p class="text-xs text-dark-300">New York Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/joseph-abboud-1.jpg" alt="Joseph Abboud AW16 — runway look at NYFW Men's" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Joseph Abboud AW16</p>
+              <p class="text-xs text-dark-300">NYFW Men's</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/hugo-boss-2.jpg" alt="Hugo Boss FW2019 — second runway look" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Hugo Boss FW2019</p>
+              <p class="text-xs text-dark-300">New York Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/carolina-herrera-2.jpg" alt="Carolina Herrera SS15 — second runway look" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Carolina Herrera SS15</p>
+              <p class="text-xs text-dark-300">Mercedes-Benz Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/vera-wang-2.jpg" alt="Vera Wang SS14 — second runway look" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Vera Wang SS14</p>
+              <p class="text-xs text-dark-300">Mercedes-Benz Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/lie-sang-bong-2.jpg" alt="Lie Sang Bong SS15 — second runway look" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Lie Sang Bong SS15</p>
+              <p class="text-xs text-dark-300">Mercedes-Benz Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/zang-toi-2.jpg" alt="Zang Toi SS16 — second runway look" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Zang Toi SS16</p>
+              <p class="text-xs text-dark-300">New York Fashion Week</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-full p-2">
+          <figure class="relative h-full rounded-xl overflow-hidden group">
+            <img src="/images/carousel/joseph-abboud-2.jpg" alt="Joseph Abboud AW16 — second runway look" class="w-full h-full object-contain bg-dark-900" loading="lazy" width="800" height="1200">
+            <figcaption class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <p class="text-sm text-white font-medium">Joseph Abboud AW16</p>
+              <p class="text-xs text-dark-300">NYFW Men's</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <!-- Carousel navigation -->
+      <button class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-all z-10" aria-label="Previous slide" onclick="moveHomeCarousel(-1)">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-all z-10" aria-label="Next slide" onclick="moveHomeCarousel(1)">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </button>
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark-950 to-transparent pt-10 pb-4 px-6" aria-hidden="true">
+        <p class="text-xs font-mono tracking-[0.2em] uppercase text-dark-400">Hugo Boss &middot; Carolina Herrera &middot; Vera Wang &middot; Lie Sang Bong &middot; Zang Toi &middot; Joseph Abboud</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Parallax: SportsTalk case study -->
+<section class="parallax-section relative h-[50vh] overflow-hidden" aria-label="SportsTalk 24/7 case study">
+  <div class="parallax-bg bg-center absolute inset-0" style="background-image: url('/images/case-studies/sportstalk/redfire.png');" role="img" aria-label="SportsTalk 24/7 platform interface"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-dark-950/90 via-dark-950/60 to-dark-950/90"></div>
+  <div class="relative h-full flex items-center">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="max-w-lg fade-in-up">
+        <p class="text-sm font-mono tracking-[0.3em] uppercase text-accent-orange mb-3">Case Study</p>
+        <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3">SportsTalk 24/7</h2>
+        <p class="text-base text-dark-200 mb-5">UX design for a real-time fan engagement platform — solving complex moderation for chat, comments, and polls at scale.</p>
+        <a href="/case-studies" class="inline-block px-6 py-3 border border-white/20 text-white text-sm font-medium rounded-lg hover:bg-white/10 transition-all">View Case Study &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial -->
+<section class="relative overflow-hidden" aria-label="Client testimonial">
+  <div class="absolute inset-0" aria-hidden="true">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-teal/5 rounded-full blur-3xl"></div>
+  </div>
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+    <blockquote class="fade-in-up">
+      <p class="text-xl sm:text-2xl text-white font-light italic leading-relaxed">"Falcon Venture Group gave us a brand voice and user experience that captures the essence of what we do — 'Simply Beautiful' isn't just a tagline, it's how every page feels."</p>
+      <footer class="mt-6 text-sm text-dark-400">— <cite class="not-italic text-dark-300">Creative Director, SPLASH Fashion TV</cite></footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="relative overflow-hidden" aria-label="Get in touch">
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+    {{ctaContent}}
+  </div>
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" aria-hidden="true"></div>
+</section>
+
+<script>
+(function() {
+  var track = document.getElementById('home-carousel');
+  if (!track) return;
+  var position = 0;
+  var autoplayInterval;
+
+  function getSlideWidth() {
+    var slide = track.querySelector('.carousel-slide');
+    return slide ? slide.offsetWidth : 300;
+  }
+  function getVisibleSlides() {
+    var w = window.innerWidth;
+    if (w >= 1024) return 3;
+    if (w >= 640) return 2;
+    return 1;
+  }
+  function getTotalSlides() {
+    return track.querySelectorAll('.carousel-slide').length;
+  }
+  function move(dir) {
+    var maxPos = getTotalSlides() - getVisibleSlides();
+    position = Math.max(0, Math.min(maxPos, position + dir));
+    track.style.transform = 'translateX(-' + (position * getSlideWidth()) + 'px)';
+    track.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1)';
+  }
+  window.moveHomeCarousel = move;
+
+  function startAutoplay() {
+    autoplayInterval = setInterval(function() {
+      var maxPos = getTotalSlides() - getVisibleSlides();
+      if (position >= maxPos) { position = -1; }
+      move(1);
+    }, 4000);
+  }
+  track.parentElement.addEventListener('mouseenter', function() { clearInterval(autoplayInterval); });
+  track.parentElement.addEventListener('mouseleave', startAutoplay);
+  startAutoplay();
+})();
+</script>
