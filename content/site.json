@@ -2,7 +2,7 @@
   "companyName": "Falcon Venture Group",
   "tagline": "Strategic consulting for brands that mean business.",
   "metaDescription": "Falcon Venture Group is a strategic consulting firm that launches and grows businesses. We help brands find their voice and communicate it consistently to their target audience.",
-  "headSnippets": [],
+  "headSnippets": ["<meta name=\"google-adsense-account\" content=\"ca-pub-9245467437918869\">"],
   "nav": [
     { "label": "Home", "href": "/" },
     { "label": "Services", "href": "/services" },
